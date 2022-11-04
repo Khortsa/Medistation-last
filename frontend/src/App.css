@@ -1,0 +1,252 @@
+
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* layout */
+:root {
+--primary: #F06369;
+--error: #E7195A;
+}
+*{
+  margin: 0;
+}
+body{
+font-family: 'Poppins', sans-serif;
+}
+h3{
+text-shadow: 1px 0px 2px #262654;
+text-align: center;
+}
+
+/* LOGIN SIGNUP forms */
+form.signup, form.login {
+max-width: 400px;
+margin: 40px auto;
+padding: 20px;
+background: #fff;
+border-radius: 4px;
+}
+input.error {
+border: 1px solid var(--error);
+}
+input {
+padding: 6px;
+width: 100%;
+border: 1px solid #ddd;
+border-radius: 4px;
+box-sizing: border-box;
+}
+div.error {
+padding: 10px;
+background: #FFEFEF;
+border: 1px solid var(--error);
+color: var(--error);
+border-radius: 4px;
+margin: 20px 0;
+}
+input.error {
+border: 1px solid var(--error);
+}
+/* home css */
+.add-home{
+  padding-top: 20vh;
+  display:flex;
+
+}
+.main-home{
+  max-width: 1300px;
+  height: 6vh ;
+  margin: 0 auto;
+}
+.home-div{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.home-div p{
+  padding-bottom: 5rem;
+}
+.imagehome{
+  width: 100%;
+  height: auto;
+}
+
+.main-home h1{
+  text-align: center;
+  color: #F06369;
+  font-weight:bold;
+}
+.logo{
+  width: 9rem;
+}
+.add-home span{
+
+  font-weight: 800;
+  font-size: 3rem;
+}
+.add-home h2{
+color: #008790;
+text-align: center;
+padding: 15px 0;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+/* About us css */
+.about-div{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.about-div img{
+  width: 60%;
+  height: auto;
+}
+.about-items{
+  padding-top: 15px;
+  display: flex;
+}
+.about-item{
+  margin: 10px;
+  padding: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color:#0096c7;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+.about-item h4{
+ text-align: center;
+}
+.about-item p{
+  padding: 10px;
+ }
+/* CARD PROPS */
+.image-container img{
+overflow: hidden;
+height: 300px;
+width: 100%;
+}
+.course-body{
+padding: 10px 10px;
+text-align: left;
+}
+.course-body h4{
+  color: Red;
+}
+/* Courses css */
+
+.courses-container{
+display: flex;
+width: 100%;
+justify-content: space-evenly;
+box-sizing: border-box;
+margin: 5rem 0;
+flex-wrap: wrap;
+}
+.courses{
+display: flex;
+flex-direction: column;
+width: 360px;
+height: auto;
+border-radius: 5px;
+padding: 20px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.course-body h4{
+  color: #F06369;
+}
+
+.courses a{
+text-decoration: none;
+color: black;
+}
+.courses a:hover{
+background: #F0F5F8;
+color: black;
+}
+.xs-flex-col{
+  padding-top: 2rem;
+}
+/* Footer */
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display:flex;
+  justify-content: center;
+  }
+  footer a{
+  padding-left:1rem;
+  text-decoration:none;
+  font-weight: 600;
+  }
+@media (max-width: 1024px) {
+.courses{
+  width: 320px;
+}
+.main-card img{
+  width: 400px;
+  height: 400px;
+}
+.xs-flex-col{
+display:flex;
+flex-direction: column;
+align-items: center;
+text-align: left;
+}
+.img-xs-size{
+width: 80vw;
+height: auto;
+margin: 0;
+}
+/* about */
+.about-items{
+  flex-direction: column;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+  /* home */
+.add-home{
+align-items: center;
+flex-direction: column-reverse;
+}
+.home-div img{
+  width: 100%;
+  height: auto;
+}
+
+.container{
+padding:0;
+margin:0;
+}
+.main-card{
+display: flex;
+}
+/* courses */
+.courses-container{
+  flex-wrap: wrap;
+}
+
+
+/* Courses sublinks */
+.xs-flex-col{
+display:flex;
+flex-direction: column;
+align-items: center;
+text-align: left;
+}
+.img-xs-size{
+width: 80vw;
+height: auto;
+margin: 0;
+}
+/* about */
+.about-items{
+  flex-direction: column;
+}
+/* Footer */
+footer{
+text-align: center;
+}
+}
