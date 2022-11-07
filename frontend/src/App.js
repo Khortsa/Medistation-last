@@ -14,7 +14,7 @@ import Advance from './pages/Advance'
 import Intermediate from './pages/Intermediate'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-// import Faq from './pages/Faq'
+import Faq from './pages/Faq'
 
 function App() {
   const { user } = useAuthContext()
@@ -32,9 +32,9 @@ function App() {
             <Route path="/beginner" element={user ? <Beginner /> : <Navigate to="/login" />}  />
             <Route path="/intermediate"  element={user ? <Intermediate /> : <Navigate to="/login" />} />
             <Route path="/advance" element={user ? <Advance /> : <Navigate to="/login" />} />
-            {/* <Route path="/faq" element={!user ? <Faq /> : <Navigate to="/login" />}  /> */}
+            <Route path="/faq" element={!user ? <Faq /> : <Navigate to="/login" />}  />
             <Route path="/login"  element={!user ? <Login /> : <Navigate to="/" />}  />
-            <Route  path="/signup"  element={!user ? <Signup /> : <Navigate to="/" />} />
+            <Route path="/signup"  element={!user ? <Signup /> : <Navigate to="/" />} />
         
           </Routes>
         </div>

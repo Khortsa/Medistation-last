@@ -18,6 +18,5 @@
     "mongoose": "^6.3.6",
     "validator": "^13.7.0"
   },
-  "devDependencies": {},
   "description": ""
 }
