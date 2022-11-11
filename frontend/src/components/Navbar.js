@@ -22,6 +22,7 @@ const Navbar = () => {
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
             {user && (
             <>
+              <span className="p-2">{user.email}</span>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Accueil</Link>
               </li>

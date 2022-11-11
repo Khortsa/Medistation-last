@@ -6,14 +6,17 @@ export const useSubscription = () => {
   const [isLoading, setIsLoading] = useState(null)
  
 
-  const subscription = async (nom, prenom) => {
+  const subscription = async (user, nom, prenom) => {
     setIsLoading(true)
     setError(null)
 
     const response = await fetch('/api/courses/beginner', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ nom, prenom })
+      headers: {
+        'Content-Type': 'application/json', 
+        'Authorization': `Bearer ${user.token}`
+      },
+      body: JSON.stringify({ email:`${user.email}`, nom, prenom })
     })
     const json = await response.json()
 

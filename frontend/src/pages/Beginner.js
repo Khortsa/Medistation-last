@@ -2,17 +2,20 @@ import { useState } from "react"
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 import { useSubscription } from "../hooks/useBeginner"
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const Beginner = () => {
 
     const [nom, setNom] = useState('')
     const [prenom, setPrenom] = useState('')
     const {subscription, error, isLoading} = useSubscription()
+    const { user } = useAuthContext()
+  
 
     const handleSubmit = async (e) => {
       e.preventDefault()
       
-      await subscription(nom, prenom)
+      await subscription(user, nom, prenom)
 
     }
 

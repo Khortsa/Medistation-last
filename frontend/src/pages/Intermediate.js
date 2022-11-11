@@ -2,20 +2,21 @@ import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { useState } from "react"
 import { useSubscription } from "../hooks/useIntermediate"
-
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const Intermediate = () => {
 
-  const [nom, setNom] = useState('')
-  const [prenom, setPrenom] = useState('')
-  const {subscription, error, isLoading} = useSubscription()
+    const [nom, setNom] = useState('')
+    const [prenom, setPrenom] = useState('')
+    const {subscription, error, isLoading} = useSubscription()
+    const { user } = useAuthContext()
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    
-    await subscription(nom, prenom)
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      
+      await subscription(user, nom, prenom)
 
-  }
+    }
  
   return (
   <div className='container'>

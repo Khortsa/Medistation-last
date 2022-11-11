@@ -5,7 +5,10 @@ const User = require('../models/userModel')
 const Schema = mongoose.Schema
 
 const beginnerSchema = new Schema({
-  author: { type: Schema.Types.ObjectId, ref: 'User' },
+  email: {
+    type: String,
+    required: true 
+  },
   nom: {
     type: String,
     required: true,
@@ -17,27 +20,26 @@ const beginnerSchema = new Schema({
 },{ timestamps: true })
 
 // static beginner method
-beginnerSchema.statics.subscription = async function(author, nom, prenom) {
+beginnerSchema.statics.subscription = async function(email, nom, prenom) {
 
   // validation
   if (!nom && !prenom ) {
     throw Error('All fields must be filled')
   }
-  const exists = await this.findOne({ author})
+  const exists = await this.findOne({ email })
   
   if (exists) {
     throw Error('already inscript')
   }
-  const beginner = await this.create({author, nom, prenom})
+  const beginner = await this.create({email, nom, prenom})
  
-
   return beginner
 }
 
-beginnerSchema.statics.userExist = async function(author) {
+beginnerSchema.statics.userExist = async function(email) {
 
   // validation
-  const exist = await this.findOne({ author})
+  const exist = await this.findOne({ email })
   return exist
 }
 

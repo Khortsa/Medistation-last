@@ -5,7 +5,10 @@ const User = require('../models/userModel')
 const Schema = mongoose.Schema
 
 const intermediateSchema = new Schema({
-  author: { type: Schema.Types.ObjectId, ref: 'User' },
+  email: {
+    type: String,
+   required: true 
+ },
   nom: {
     type: String,
     required: true,
@@ -17,26 +20,26 @@ const intermediateSchema = new Schema({
 },{ timestamps: true })
 
 // static intermediate method
-intermediateSchema.statics.subscription = async function(author, nom, prenom) {
+intermediateSchema.statics.subscription = async function(email, nom, prenom) {
 
   // validation
   if (!nom && !prenom ) {
     throw Error('All fields must be filled')
   }
-  const exists = await this.findOne({ author})
+  const exists = await this.findOne({ email })
   
   if (exists) {
     throw Error('already inscript')
   }
-  const intermediate = await this.create({author, nom, prenom})
+  const intermediate = await this.create({email, nom, prenom})
   
   return intermediate
 }
 
-intermediateSchema.statics.userExist = async function(author) {
+intermediateSchema.statics.userExist = async function(email, nom, prenom) {
 
   // validation
-  const exist = await this.findOne({ author})
+  const exist = await this.findOne({ email})
   return exist
 }
 
