@@ -9,14 +9,11 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     await login(email, password)
   }
-
   return (
     <form className="login" onSubmit={handleSubmit}>
       <h3 className="mb-4">Connexion </h3>
-      
       <label>Email :</label>
       <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} className="mb-2" autoComplete="off" placeholder="votre email" />
       <label>Mot de passe:</label>

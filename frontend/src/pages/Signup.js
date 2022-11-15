@@ -29,11 +29,11 @@ const Signup = () => {
 				value={password}
 				valueAgain={cpassword}
 				messages={{
-					minLength: "Must have 8 caracteres.",
-					specialChar: "Must contain caracter special.",
-					number: "Must have a number.",
-					capital: "Must have a majuscule.",
-					match: "Password should match with the confirm password.",
+					minLength: "Doit avoir 8 caractères",
+					specialChar: "Doit contenir un caractère spécial",
+					number: "Il faut avoir un numéro",
+					capital: "Il doit avoir un majuscule",
+					match: "MDP doit correspondre au MDP de CMDP.",
 				}}
 			/>
       <Button disabled={isLoading} className="btn btn-success me-4 d-flex justify-content-center" children="S'inscrire" />

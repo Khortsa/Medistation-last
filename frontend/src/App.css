@@ -119,7 +119,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 .about-item p{
   padding: 10px;
  }
-/* CARD PROPS */
+/* CARD PROPS IN THE CARD COMPONENTS FOR THE COURSES*/
 .image-container img{
 overflow: hidden;
 height: 300px;
@@ -141,6 +141,7 @@ justify-content: space-evenly;
 box-sizing: border-box;
 margin: 5rem 0;
 flex-wrap: wrap;
+overflow: hidden;
 }
 .courses{
 display: flex;
@@ -237,7 +238,6 @@ margin: 0;
   flex-direction: column;
 }
 }
-
 
 @media screen and (max-width: 480px) {
   /* home */

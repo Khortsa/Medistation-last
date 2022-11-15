@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom';
  const Courses = () => {
 
     return (
-        <div className="courses-main-div">    
+        <div >    
           <h3>Cours</h3>
           <div className="courses-container"> 
             <div className="courses">

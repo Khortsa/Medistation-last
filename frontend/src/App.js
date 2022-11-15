@@ -25,7 +25,6 @@ function App() {
         <Navbar />
         <div className="pages">
           <Routes>
-          
             <Route path="/" element={user ? <Home /> : <Navigate to="/login" />}  />
             <Route path="/about" element={user ? <About /> : <Navigate to="/login" />} />
             <Route path="/courses" element={user ? <Courses /> : <Navigate to="/login" />}  />
@@ -35,7 +34,6 @@ function App() {
             <Route path="/faq" element={user ? <Faq /> : <Navigate to="/login" />}  />
             <Route path="/login"  element={!user ? <Login /> : <Navigate to="/" />}  />
             <Route path="/signup"  element={!user ? <Signup /> : <Navigate to="/" />} />
-        
           </Routes>
         </div>
         <Footer />

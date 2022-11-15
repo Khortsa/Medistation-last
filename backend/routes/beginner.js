@@ -5,6 +5,8 @@ const requireAuth = require('../middleware/requireAuth')
 const beginner  = require('../controllers/beginnerController')
 
 const router = express.Router()
+
+// require auth for all beginner route
 router.use(requireAuth)
 
 // login route
