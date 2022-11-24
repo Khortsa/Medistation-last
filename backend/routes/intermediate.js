@@ -8,6 +8,7 @@ router.use(requireAuth)
 
 // intermediate route
 router.post('/intermediate', intermediate)
+router.get("/intermediate", intermediate) 
 
 
 module.exports = router

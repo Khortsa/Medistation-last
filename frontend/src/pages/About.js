@@ -6,7 +6,7 @@ const About = () => {
       <div className="container">
         <div className="ps-2 about-div" >
           <h3 className="display-4 fw-normal pt-3 text-center">À propos de nous</h3>
-          <img className="img-about " src="./img/about.jpeg" alt="vector of different races adults meditating"/>
+          <img className="img-about " src="./img/about.jpeg" alt="vecteur de différentes races d'adultes en train de méditer"/>
           <div className="about">
             <p>Medistation est une plateforme pour ceux qui sont en route pour pratiquer la méditation et pour ceux qui veulent apprendre la méditation. Notre style de méditation est compatible avec toute culture, philosophie, croyance ou mode de vie. Nos cours sont dispensés par des bénévoles très expérimentés.
               "Le corps bénéficie des mouvements et l'esprit bénéficie de l'immobilité".

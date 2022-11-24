@@ -11,7 +11,7 @@ const getAdvance = async (req, res) => {
       const isBeginnerExist = await Beginner.userExist(email)
       const isIntermediaterExist = await Intermediate.userExist(email)
     if (isBeginnerExist || isIntermediaterExist ) {
-      throw Error('already inscript')
+      throw Error('déjà inscrit')
     }
         const advance = await Advance.subscription(email, nom, prenom)
       

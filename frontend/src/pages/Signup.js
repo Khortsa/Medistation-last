@@ -13,7 +13,6 @@ const Signup = () => {
     e.preventDefault()
     await signup(email, password, cpassword)
   }
-  
   return (
     <form className="signup" onSubmit={handleSubmit}>
       <h3 className="mb-4">S'inscrire</h3>
